@@ -1,0 +1,20 @@
+Overview
+
+This tool analyze your iCal file to pick up events per week day.
+You can use it for scheduling weekly meeting.
+
+How to use
+
+### first time
+% ./dow_scheduler.rb -u http://hostname/path/to/ical_file.ics
+
+### After the first execution, cache file cals.yml is used to analyze.
+### If you need to reload iCal file, you can specify force option (-f).
+% ./dow_scheduler.rb -f -u http://hostname/path/to/ical_file.ics
+
+### You can specify analizing period by -s and -e options.
+% ./dow_scheduler.rb -s 2010-09-01 -e 2010-09-31
+
+### You can only view the specified day of week
+% ./dow_scheduler.rb -s 2010-09-01 -e 2010-09-31 -d Thu
+
